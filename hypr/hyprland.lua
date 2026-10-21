@@ -31,7 +31,8 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "kitty -e yazi"
 local menu        = "hyprlauncher"
-
+local sysmonitor  = "btop"
+ 
 
 -------------------
 ---- AUTOSTART ----
@@ -49,9 +50,9 @@ local menu        = "hyprlauncher"
 -- end)
 
 hl.on("hyprland.start", function ()
-  hl.exec_cmd("hyprpaper")
   hl.exec_cmd("swaync")
-  hl.exec_cmd("kitty --hold fastfetch")
+  hl.exec_cmd("awww-daemon")
+  hl.exec_cmd("sh -c 'sleep 1 && awww restore'")
 end)
 
 
