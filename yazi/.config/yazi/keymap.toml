@@ -1,0 +1,38 @@
+[mgr]
+
+[[mgr.prepend_keymap]]
+on = "<F5>"
+run = 'shell "imv \"$PWD\"/*"'
+desc = "Start slideshow of current directory"
+
+[[mgr.prepend_keymap]]
+on  = ["b","m"]
+run = "plugin bookmarks save"
+desc = "Save bookmark"
+
+[[mgr.prepend_keymap]]
+on  = ["b","j"]
+run = "plugin bookmarks jump"
+desc = "Jump to bookmark"
+
+[[mgr.prepend_keymap]]
+on  = [ "b", "d" ]
+run = "plugin bookmarks delete"
+desc = "Delete bookmark"
+
+[[mgr.prepend_keymap]]
+on  = [ "b", "D" ]
+run = "plugin bookmarks delete_all"
+desc = "Delete all bookmarks"
+
+
+[[mgr.prepend_keymap]]
+on   = [ "b", "a" ]
+run  = "shell '$HOME/.config/yazi/addfav.sh \"$@\"' --block"
+desc = "Add selected folders to favs"
+
+
+[[mgr.prepend_keymap]]
+on   = [ "b", "f" ]
+run  = "cd ~/favs"
+desc = "Open favs"
